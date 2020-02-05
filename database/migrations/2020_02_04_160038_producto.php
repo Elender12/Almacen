@@ -22,7 +22,8 @@ class Producto extends Migration
             $table->string('categoria');
             $table->float('precio');
             $table->integer('cantidad');
-            $table->integer('almacen');
+            $table->unsignedBigInteger('almacen');
+            $table->foreign('almacen')->references('id')->on('usuarios');
         });
     }
 
