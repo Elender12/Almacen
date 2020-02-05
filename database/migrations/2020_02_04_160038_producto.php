@@ -21,10 +21,8 @@ class Producto extends Migration
             $table->timestamps('fechaSalida');
             $table->string('categoria');
             $table->float('precio');
-            $table->int('cantidad');
-            $table->int('almacen');
-
-
+            $table->integer('cantidad');
+            $table->integer('almacen');
         });
     }
 
@@ -35,6 +33,6 @@ class Producto extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('productos');
     }
 }
