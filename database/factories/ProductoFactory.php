@@ -13,6 +13,6 @@ $factory->define(Producto::class, function (Faker $faker) {
         'categoria'=>$faker->sentence(1),
         'precio'=>$faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 1000),
         'cantidad'=>$faker->randomDigit,
-        'almacen'=>$faker->numberBetween(3,5),
+        'almacen'=>$faker->numberBetween(1,2),
     ];
 });
