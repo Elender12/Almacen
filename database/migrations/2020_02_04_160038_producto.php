@@ -17,8 +17,8 @@ class Producto extends Migration
         Schema::create('productos', function(Blueprint $table){
             $table->bigIncrements('id');
             $table->string('nombre');
-            $table->timestamps('fechaEntrada');
-            $table->timestamps('fechaSalida');
+            $table->string('fechaEntrada');
+            $table->string('fechaSalida');
             $table->string('categoria');
             $table->float('precio');
             $table->integer('cantidad');
