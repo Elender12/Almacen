@@ -65,13 +65,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <h1>Almacen</h1>
-            
-
-
-
-
-            
+            <h1>Almacen</h1>   
         </div>
     </body>
 </html>

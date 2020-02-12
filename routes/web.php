@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/almacenes', 'HomeController@index')->name('home');
 
 Auth::routes();
 
