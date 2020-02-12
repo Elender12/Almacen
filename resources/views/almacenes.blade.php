@@ -19,7 +19,7 @@
                 <td>{{ $almacen->capacidad }} </td>
                 <td>{{ $almacen->encargado }} </td>
                 <td><a>editar</a></td>
-                <td><a>borrar</a></td>
+                <td><a  href="{{action('ControllerAlmacen@delete($almacen->id)')}}">borrar</a></td>
             </tr>
         @endforeach
     </table>
