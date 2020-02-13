@@ -18,7 +18,7 @@ class ControllerAlmacen extends Controller
         $almacenes=Almacen::destroy($id);
         //return index();
       //  return view('home');
-      return view('almacenes', ['almacenes' => $almacenes]);
+      return redirect('home');
     }
 
     // Actualización de los datos
