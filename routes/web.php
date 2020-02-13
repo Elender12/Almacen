@@ -18,7 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'ControllerAlmacen@index');//->name('home');
-Route::delete('/home', 'ControllerAlmacen@delete($id)');
+Route::get('/home', 'ControllerAlmacen@delete');
+// Route::get('/home/{id}', function ($id) {
+//     return 'borrando almacen' . $id;
+// });
 Auth::routes();
 
 //Route::get('/home', 'AlmacenController@index')->name('home');

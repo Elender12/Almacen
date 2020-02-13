@@ -13,10 +13,11 @@ class ControllerAlmacen extends Controller
         return view('almacenes', ['almacenes' => $almacenes]);
     }
 
-    // Elimina un almacen
-    public function delete($id){
-        Almacen::destroy($id);
+    //Elimina un almacen
+    public function delete(){
+        Almacen::delete();
         //return index();
-        return view('home');
+      //  return view('home');
+      return view('almacenes', ['almacenes' => $almacenes]);
     }
 }
