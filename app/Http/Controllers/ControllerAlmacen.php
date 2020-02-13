@@ -14,8 +14,8 @@ class ControllerAlmacen extends Controller
     }
 
     //Elimina un almacen
-    public function delete(){
-        Almacen::delete();
+    public function delete($id){
+        $almacenes=Almacen::destroy($id);
         //return index();
       //  return view('home');
       return view('almacenes', ['almacenes' => $almacenes]);

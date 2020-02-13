@@ -21,7 +21,7 @@
                 <td><a>editar</a></td>
                 <td>{{ $almacen->id }} </td>
             
-                <td><a  href="{{action('ControllerAlmacen@delete()')}}">borrar</a></td>
+                <td><a href="{{action('ControllerAlmacen@delete', ['id' => $almacen->id])}}">borrar</a></td>
             </tr>
         @endforeach
     </table>
