@@ -20,4 +20,15 @@ class ControllerAlmacen extends Controller
       //  return view('home');
       return view('almacenes', ['almacenes' => $almacenes]);
     }
+
+    // Actualización de los datos
+    public function update($id)
+    {
+        $almacen = Almacen::find($id);
+        // TODO: CRear la vista para mostrar el formulario de edicion
+        return view('almacenes', ['almacen' => $almacen]);
+    }
+
+    
+
 }
