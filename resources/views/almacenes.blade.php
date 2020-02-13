@@ -18,8 +18,7 @@
                 <td>{{ $almacen->tipoAlmacen }} </td>
                 <td>{{ $almacen->capacidad }} </td>
                 <td>{{ $almacen->encargado }} </td>
-                <td><a>editar</a></td>
-                <td>{{ $almacen->id }} </td>
+                <td><a href="{{action('ControllerAlmacen@update', ['id' => $almacen->id])}}">editar</a></td>
             
                 <td><a href="{{action('ControllerAlmacen@delete', ['id' => $almacen->id])}}">borrar</a></td>
             </tr>
