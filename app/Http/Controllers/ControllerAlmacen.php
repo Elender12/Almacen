@@ -12,6 +12,7 @@ class ControllerAlmacen extends Controller
         $almacenes = Almacen::all();
         return view('almacenes', ['almacenes' => $almacenes]);
     }
+    
 
     //Elimina un almacen
     public function delete($id){
@@ -26,7 +27,15 @@ class ControllerAlmacen extends Controller
     {
         $almacen = Almacen::find($id);
         // TODO: CRear la vista para mostrar el formulario de edicion
-        return view('almacenes', ['almacen' => $almacen]);
+        //return redirect('up');
+        return view('up', ['almacen' => $almacen]);
+
+    }
+
+    public function create()
+    {
+        //redirecciona a la vista create
+        return view('create');
     }
 
     
