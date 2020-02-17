@@ -2,7 +2,11 @@
 
 @section('content')
     <div class="flex-center position-ref">
-        <h1>Lista de almacenes</h1>   
+        <h1>Lista de almacenes</h1>
+    </div>
+
+    <div class="flex-center position-ref">
+        <a href="{{action('ControllerAlmacen@create')}}">nuevo</a>
     </div>
 
     <table class="flex-center position-ref">
@@ -19,11 +23,10 @@
                 <td>{{ $almacen->capacidad }} </td>
                 <td>{{ $almacen->encargado }} </td>
                 <td><a href="{{action('ControllerAlmacen@update', ['id' => $almacen->id])}}">editar</a></td>
-            
+
                 <td><a href="{{action('ControllerAlmacen@delete', ['id' => $almacen->id])}}">borrar</a></td>
             </tr>
         @endforeach
-        <a href="{{action('ControllerAlmacen@create')}}">nuevo</a>
 
     </table>
 @endsection
