@@ -13,7 +13,7 @@ class Almacen extends Migration
      */
     public function up()
     {
-        Schema::create('almacenes', function(Blueprint $table){
+        Schema::create('almacens', function(Blueprint $table){
             $table->bigIncrements('id');
             $table->string('nombreAlmacen');
             $table->string('tipoAlmacen');
@@ -30,6 +30,6 @@ class Almacen extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('almacenes');
+        Schema::dropIfExists('almacens');
     }
 }
