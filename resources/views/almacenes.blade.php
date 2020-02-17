@@ -23,7 +23,7 @@
                 <td><a href="{{action('ControllerAlmacen@delete', ['id' => $almacen->id])}}">borrar</a></td>
             </tr>
         @endforeach
-        <a href="{{action('ControllerAlmacen@create')}}">nuevo</a>
+        <a href="{{action('ControllerAlmacen@create')}}">Nuevo almacén</a>
 
     </table>
 @endsection

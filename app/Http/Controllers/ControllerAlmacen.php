@@ -37,7 +37,17 @@ class ControllerAlmacen extends Controller
         //redirecciona a la vista create
         return view('create');
     }
-
-    
+    public function altaAlmacen(Request $request)
+    {
+        //creo un objeto
+        $almacen = new Almacen();
+        //cojo los valores
+        $almacen->nombreAlmacen = $request->input('nombreAlmacen');
+        $almacen->tipoAlmacen = $request->input('tipo');
+        $almacen->capacidad = $request->input('capacidad');
+        $almacen->encargado = $request->input('encargado');
+        $almacen->save(); // guardo los datos
+        return redirect()->route('home')->with('info','Se añadió el almacén.');
+    }
 
 }
