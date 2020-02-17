@@ -6,15 +6,17 @@
     </div>
 
     <div class="flex-center position-ref">
-        <a href="{{action('ControllerAlmacen@create')}}">nuevo</a>
+        <button type = "button" class = "btn btn-success" onclick="location.href='{{action('ControllerAlmacen@create')}}'">Crear nuevo almacén</button>
     </div>
-
-    <table class="flex-center position-ref">
+    <br/><br/>
+    <table class="table table-responsive table-hover flex-center position-ref">
         <tr>
             <th>Nombre almacen</th>
             <th>Tipo almacen</th>
             <th>Capacidad</th>
             <th>Encargado</th>
+            <th></th>
+            <th></th>
         </tr>
         @foreach ($almacenes as $almacen)
             <tr>
@@ -26,8 +28,6 @@
 
                 <td><a href="{{action('ControllerAlmacen@delete', ['id' => $almacen->id])}}">borrar</a></td>
             </tr>
-        @endforeach
-        <a href="{{action('ControllerAlmacen@create')}}">Nuevo almacén</a>
-
+        @endforeach 
     </table>
 @endsection

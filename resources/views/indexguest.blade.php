@@ -7,7 +7,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <p>Vaya, pI just had to change the redirect in app/Exceptions/Handler:arece que no estás logeado en la aplicación si 
+        <p>Vaya, parece que no estás logeado en la aplicación si 
         quiere acceder al contenidos deberá iniciar sesión con su cuenta o 
         registrarse en caso de no tener una.</p>
     </div>

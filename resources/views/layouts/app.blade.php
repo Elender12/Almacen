@@ -28,7 +28,7 @@
 
                 <!-- Editamos el nav situado a la izquierda en función de si el usuario está logeado o no -->
                 @guest
-                    <a class="navbar-brand" href="{{ url('/indexguest') }}">
+                    <a class="navbar-brand" href="{{ url('/index') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>                    
                 @else

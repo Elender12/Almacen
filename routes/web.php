@@ -24,6 +24,7 @@ Auth::routes();
 Route::get('/home', 'ControllerAlmacen@index')->name('home');
 
 Route::get('/home/{id}', 'ControllerAlmacen@delete');
+
 Route::get('/up/{id}', 'ControllerAlmacen@update');
 Route::get('/create', 'ControllerAlmacen@create')->name('crear');
 Route::post('/create','ControllerAlmacen@altaAlmacen')->name('darDeAlta');

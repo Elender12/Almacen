@@ -22,15 +22,14 @@ class ControllerAlmacen extends Controller
       return redirect('home');
     }
 
+
     // Actualización de los datos
     public function update($id)
     {
         $almacen = Almacen::find($id);
-        // TODO: CRear la vista para mostrar el formulario de edicion
-        //return redirect('up');
         return view('up', ['almacen' => $almacen]);
-
     }
+
 
     public function create()
     {
