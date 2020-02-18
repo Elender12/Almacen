@@ -48,5 +48,17 @@ class ControllerAlmacen extends Controller
         $almacen->save(); // guardo los datos
         return redirect()->route('home')->with('info','Se añadió el almacén.');
     }
+    public function actualizarAlmacen(Request $request)
+    {
+        $almacen = new Almacen();
+        $almacen = Almacen::find($request->input('id'));
+        $almacen->nombreAlmacen = $request->input('nombreAlmacen');
+        $almacen->tipoAlmacen = $request->input('tipo');
+        $almacen->capacidad = $request->input('capacidad');
+        $almacen->encargado = $request->input('encargado');
+        $almacen->save(); // guardo los datos;
+        return redirect()->route('home')->with('info','Almacen actualizado');
+    }
+
 
 }

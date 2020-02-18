@@ -10,7 +10,8 @@
   <div class="row mt-5">
     <div class="col-sm-8 offset-sm-2">
       <!-- Hay que modificar la accion por la de modificar cuando este implementada -->
-      <form action="{{route('darDeAlta')}}" method="post">
+      <form action="{{route('actualizar')}}" method="post">
+      @csrf
         <input type="hidden" name="idAlmacen" id="idAlmacen" class="form-control" required value="{{ $almacen->id }}">
         <div class="form-group">
           <label for="nombreAlmacen">Nombre almacén:</label>
@@ -28,6 +29,7 @@
           <label for="Encargado">Encargado:</label>
           <input type="text" name="encargado" id="Encargado" class="form-control" required value="{{ $almacen->encargado }}">
         </div>
+        <input type="hidden" name="id" value = "{{$almacen->id}}">
         <button type="submit" class="btn btn-success">Enviar</button>
         <button type="button" onclick="location.href='{{action('ControllerAlmacen@index')}}'" class="btn btn-danger">Volver</button>
       </form>
