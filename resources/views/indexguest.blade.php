@@ -7,7 +7,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <p>Vaya, parece que no estás logeado en la aplicación si 
+        <p>Vaya... parece que no estás logeado en la aplicación. Si 
         quiere acceder al contenidos deberá iniciar sesión con su cuenta o 
         registrarse en caso de no tener una.</p>
     </div>

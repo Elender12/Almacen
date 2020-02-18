@@ -11,11 +11,11 @@
     <br/><br/>
     <table class="table table-responsive table-hover flex-center position-ref">
         <tr>
-            <th>Nombre almacen</th>
-            <th>Tipo almacen</th>
+            <th>Nombre </th>
+            <th>Tipo </th>
             <th>Capacidad</th>
-            <th>Encargado</th>
-            <th></th>
+            <th>Número encargado</th>
+            <th>Opciones:</th>
             <th></th>
         </tr>
         @foreach ($almacenes as $almacen)
@@ -24,8 +24,9 @@
                 <td>{{ $almacen->tipoAlmacen }} </td>
                 <td>{{ $almacen->capacidad }} </td>
                 <td>{{ $almacen->encargado }} </td>
+                <!-- botón editar almacén -->
                 <td><a href="{{action('ControllerAlmacen@update', ['id' => $almacen->id])}}">editar</a></td>
-
+                <!-- botón borrar almacén -->
                 <td><a href="{{action('ControllerAlmacen@delete', ['id' => $almacen->id])}}">borrar</a></td>
             </tr>
         @endforeach 

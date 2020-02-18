@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Usuario::class, function (Faker $faker) {
     return [
-        //se generan datos aleatorios
+        //se generan datos aleatorios utilizando una factoría concreta
         'nombre'=>$faker->name,
         'email' => $faker->unique()->safeEmail,
         'rol'=>$faker->company,
