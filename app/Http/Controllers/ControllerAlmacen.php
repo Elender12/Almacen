@@ -63,6 +63,4 @@ class ControllerAlmacen extends Controller
         //vuelvo a la vista que lista los almacenes
         return redirect()->route('home')->with('info','Almacen actualizado');
     }
-
-
 }

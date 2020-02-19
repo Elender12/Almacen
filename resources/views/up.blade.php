@@ -11,6 +11,7 @@
     <div class="col-sm-8 offset-sm-2">
       <!-- Va al método del controlador que actualiza el almacén -->
       <form action="{{route('actualizar')}}" method="post">
+      @method('put')
       @csrf
       <!-- Formulario para la actualización de los datos del almácen -->
         <input type="hidden" name="idAlmacen" id="idAlmacen" class="form-control" required value="{{ $almacen->id }}">

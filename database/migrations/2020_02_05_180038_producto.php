@@ -23,7 +23,7 @@ class Producto extends Migration
             $table->float('precio');
             $table->integer('cantidad');
             $table->unsignedBigInteger('almacen');
-            $table->foreign('almacen')->references('id')->on('almacens');
+            //$table->foreign('almacen')->references('id')->on('almacens');
         });
     }
 
