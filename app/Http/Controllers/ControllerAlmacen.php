@@ -7,12 +7,17 @@ use App\Almacen;
 
 class ControllerAlmacen extends Controller
 {
-    // Lista los almacenes
+    // Lista los almacenes del usuario logueado
     public function index(){
-        $almacenes = Almacen::all();
+        $almacenes = Almacen::busc();
         return view('almacenes', ['almacenes' => $almacenes]);
     }
     
+    // Lista los almacenes de todos los usuarios
+    public function todos(){
+        $almacenes = Almacen::all();
+        return view('almacenes', ['almacenes' => $almacenes]);
+    }
 
     //Elimina un almacen
     public function delete($id){
