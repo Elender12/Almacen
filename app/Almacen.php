@@ -2,6 +2,7 @@
 
 namespace App;
 use App\Usuario; 
+use Auth;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,4 +16,9 @@ class Almacen extends Model
         'encargado'
     ];
     public $timestamps = false;
+
+    public static function busc(){
+        $id=Auth::user()->id;
+        
+    }
 }

@@ -9,8 +9,8 @@ class ControllerAlmacen extends Controller
 {
     // Lista los almacenes
     public function index(){
-        $almacenes = Almacen::all();
-        return view('almacenes', ['almacenes' => $almacenes]);
+        $almacenes = Almacen::busc();
+        //return view('almacenes', ['almacenes' => $almacenes]);
     }
     
 
