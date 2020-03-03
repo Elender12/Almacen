@@ -1,6 +1,10 @@
 <?php
 
 namespace App;
+use App\Usuario; 
+use Auth;
+use DB;
+
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,4 +21,12 @@ class Producto extends Model
         'almacen'
     ];
     public $timestamps = false;
+
+
+    public static function bpro($id){
+
+    $productos = DB::select('select * from productos where almacen = ?', [$id]);
+
+    return $productos;
+    }
 }
