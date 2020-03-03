@@ -5,26 +5,27 @@
         <h1>Lista de productos</h1>
     </div>
 
-    <div class="flex-center position-ref">
-        <button type = "button" class = "btn btn-success" onclick="location.href='{{action('ControllerAlmacen@create')}}'">Crear nuevo almacén</button>
-        <button type = "button" class = "btn btn-success" onclick="location.href='{{action('ControllerAlmacen@todos')}}'">Mostrar todos los almacenes</button>
-    </div>
     <br/><br/>
     <table class="table table-responsive table-hover flex-center position-ref">
         <tr>
+            <th>Id </th>
             <th>Nombre </th>
-            <th>Tipo </th>
-            <th>Capacidad</th>
-            <th>Número encargado</th>
-            <th>Opciones:</th>
+            <th>Entrada</th>
+            <th>Salida</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
             <th></th>
         </tr>
         @foreach ($productos as $productos)
             <tr>
-                <td>{{ $productos->nombreAlmacen }} </td>
-                <td>{{ $productos->tipoAlmacen }} </td>
-                <td>{{ $productos->capacidad }} </td>
-                <td>{{ $productos->encargado }} </td>
+                <td>{{ $productos->id }} </td>
+                <td>{{ $productos->nombre }} </td>
+                <td>{{ $productos->fechaEntrada }} </td>
+                <td>{{ $productos->fechaSalida }} </td>
+                <td>{{ $productos->categoria }} </td>
+                <td>{{ $productos->precio }} </td>
+                <td>{{ $productos->cantidad }} </td>
             </tr>
         @endforeach 
     </table>
