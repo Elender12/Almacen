@@ -29,4 +29,7 @@
             </tr>
         @endforeach 
     </table>
+    <div class="flex-center position-ref">
+        <button type="submit" class= "btn btn-danger" onclick="location.href='{{action('ControllerAlmacen@index')}}'">Volver </button>
+    </div>
 @endsection
