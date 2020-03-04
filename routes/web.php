@@ -31,6 +31,8 @@ Route::get('/todos', 'ControllerAlmacen@todos')->name('todos');
 Route::post('/create','ControllerAlmacen@altaAlmacen')->name('darDeAlta');
 Route::put('/up','ControllerAlmacen@actualizarAlmacen')->name('actualizar');
 Route::get('/prod/{id}','ControllerProducto@prod')->name('prod');
+Route::get('/add', 'ControllerProducto@add');
+Route::post('/ad','ControllerProducto@altaProducto')->name('ProdAlt');
 
 // Route::get('/home/{id}', function ($id) {
 //     return 'borrando almacen' . $id;

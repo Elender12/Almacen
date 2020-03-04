@@ -30,6 +30,7 @@
         @endforeach 
     </table>
     <div class="flex-center position-ref">
+        <button type="submit" class= "btn btn-success" onclick="location.href='{{action('ControllerProducto@add')}}'">Añadir </button>
         <button type="submit" class= "btn btn-danger" onclick="location.href='{{action('ControllerAlmacen@index')}}'">Volver </button>
     </div>
 @endsection

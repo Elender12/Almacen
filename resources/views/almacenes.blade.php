@@ -7,7 +7,10 @@
 
     <div class="flex-center position-ref">
         <button type = "button" class = "btn btn-success m-4" onclick="location.href='{{action('ControllerAlmacen@create')}}'">Crear nuevo almacén</button>
+        
         <button type = "button" class = "btn btn-success m-4" onclick="location.href='{{action('ControllerAlmacen@todos')}}'">Mostrar todos los almacenes</button>
+        <button type = "button" class = "btn btn-success m-4" onclick="location.href='{{action('ControllerAlmacen@index')}}'">Mostrar mis almacenes</button>
+            
     </div>
     <br/><br/>
     <table class="table table-responsive table-hover flex-center position-ref">
